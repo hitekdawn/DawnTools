@@ -1,4 +1,4 @@
 <Bindings>
-	<Binding name='CLICK DawnMacrosKeybindButton:LeftButton' header='DAWNTOOLS' category='DAWNTOOLS'>
+	<Binding name='CLICK DawnMacrosKeybindButton:LeftButton' header='BINDING_DAWNTOOLS_HEADER' category='BINDING_DAWNTOOLS_HEADER'>
 	</Binding>
 </Bindings>
