@@ -1,6 +1,5 @@
 local DawnTools = LibStub("AceAddon-3.0"):GetAddon("DawnTools")
-local DawnHelperFunctions = DawnTools:NewModule("DawnHelperFunctions",
-                                                "AceEvent-3.0")
+local DawnHelperFunctions = DawnTools:NewModule("DawnHelperFunctions", "AceEvent-3.0")
 
 function DawnHelperFunctions:ParseInput(input)
     local parsedInput = string.gmatch(input, "[^\r\n]+")
@@ -8,9 +7,9 @@ function DawnHelperFunctions:ParseInput(input)
 end
 
 function DawnHelperFunctions:IsThreeMonthsAgo(input)
-    local timeToConvert = strsub(input, 0, 19) -- Convert input to yyyy-MM-dd hh:mm:ss
+    local timeToConvert = strsub(input, 0, 19)  -- Convert input to yyyy-MM-dd hh:mm:ss
 
-    local threemonths = 7889229 -- Three months in epoch
+    local threemonths = 7889229                 -- Three months in epoch
     local threemonthsago = time() - threemonths -- Get time 3 months ago
 
     -- Convert string to time
@@ -31,10 +30,13 @@ function DawnHelperFunctions:IsThreeMonthsAgo(input)
 end
 
 function DawnHelperFunctions:IsOlderThanDays(input, days)
+    if not input then
+        return false -- Treat nil dates as not old (don't delete)
+    end
     local timeToConvert = strsub(input, 0, 19) -- Convert input to yyyy-MM-dd hh:mm:ss
 
-    local daysInSeconds = days * 24 * 60 * 60 -- Convert days to seconds
-    local cutoffTime = time() - daysInSeconds -- Get cutoff time
+    local daysInSeconds = days * 24 * 60 * 60  -- Convert days to seconds
+    local cutoffTime = time() - daysInSeconds  -- Get cutoff time
 
     -- Convert string to time
     local pattern = "(%d+)-(%d+)-(%d+) (%d+):(%d+):(%d+)"
@@ -69,7 +71,7 @@ function DawnHelperFunctions:ParseInviteInput()
             name = name .. "-" .. select(2, UnitFullName("player"))
         end
         DawnTools.groupInviter.playersToInvite[#DawnTools.groupInviter
-            .playersToInvite + 1] = {
+        .playersToInvite + 1] = {
             name = name,
             balance = balance * 10000,
             timer = nil,
@@ -80,5 +82,7 @@ function DawnHelperFunctions:ParseInviteInput()
 end
 
 function DawnHelperFunctions:NewLine() return "\n" end
+
 function DawnHelperFunctions:NewLine2() return "\\n" end
+
 function DawnHelperFunctions:Quote() return '"' end
