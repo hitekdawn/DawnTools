@@ -2,7 +2,7 @@
 ## Title: |cFFFF5050Dawn|rTools
 ## Notes: Dawn Community - https://discord.gg/dawneu
 ## Author: Hitek
-## Version: 2025.10.31-ad
+## Version: 2025.11.03-ad
 ## OptionalDependencies: Ace3, LibRealmInfo, LibDBIcon, LibDataBroker-1.1
 ## SavedVariables: DawnToolsDB
 ## IconTexture: Interface\AddOns\DawnTools\media\dawnLogo
