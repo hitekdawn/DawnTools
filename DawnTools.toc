@@ -2,7 +2,7 @@
 ## Title: |cFFFF5050Dawn|rTools
 ## Notes: Dawn Community - https://discord.gg/dawneu
 ## Author: Hitek
-## Version: 2026.01.21.2-ad
+## Version: 2026.01.22-ad
 ## OptionalDependencies: Ace3, LibRealmInfo, LibDBIcon, LibDataBroker-1.1
 ## SavedVariables: DawnToolsDB
 ## IconTexture: Interface\AddOns\DawnTools\media\dawnLogo
@@ -31,10 +31,9 @@ libs\LibDeflate\LibDeflate.lua
 libs\LibSerialize\lib.xml
 
 DawnTools.lua
-modules\DawnDepositSender.lua
-modules\DawnMailSender.lua
+modules\DawnHelperFunctions.lua
+modules\DawnMailLogger.lua
 modules\DawnMailLog.lua
-
 
 
 modules\DawnGroupInviter.lua
@@ -42,5 +41,5 @@ modules\DawnGoldLog.lua
 modules\DawnInfoPanel.lua
 modules\DawnRealmLookup.lua
 modules\DawnTradeLog.lua
-modules\DawnHelperFunctions.lua
 modules\DawnMacros.lua
+modules\DawnStringSender.lua

@@ -10,9 +10,9 @@ function DawnHelperFunctions:IsThreeMonthsAgo(input)
     local timeToConvert = strsub(input, 0, 19)  -- Convert input to yyyy-MM-dd hh:mm:ss
 
     local threemonths = 7889229                 -- Three months in epoch
-    local threemonthsago = time() - threemonths -- Get time 3 months ago
+    local threemonthsago = GetServerTime() - threemonths -- Get time 3 months ago
 
-    -- Convert string to time
+    -- Convert string to time (UTC)
     local pattern = "(%d+)-(%d+)-(%d+) (%d+):(%d+):(%d+)"
     local runyear, runmonth, runday, runhour, runminute, runseconds =
         timeToConvert:match(pattern)
@@ -36,9 +36,9 @@ function DawnHelperFunctions:IsOlderThanDays(input, days)
     local timeToConvert = strsub(input, 0, 19) -- Convert input to yyyy-MM-dd hh:mm:ss
 
     local daysInSeconds = days * 24 * 60 * 60  -- Convert days to seconds
-    local cutoffTime = time() - daysInSeconds  -- Get cutoff time
+    local cutoffTime = GetServerTime() - daysInSeconds  -- Get cutoff time
 
-    -- Convert string to time
+    -- Convert string to time (UTC)
     local pattern = "(%d+)-(%d+)-(%d+) (%d+):(%d+):(%d+)"
     local runyear, runmonth, runday, runhour, runminute, runseconds =
         timeToConvert:match(pattern)
