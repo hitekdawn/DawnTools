@@ -2,7 +2,7 @@
 ## Title: |cFFFF5050Dawn|rTools
 ## Notes: Dawn Community - https://discord.gg/dawneu
 ## Author: Hitek
-## Version: 2026.01.22-ad
+## Version: 2026.01.23-ad
 ## OptionalDependencies: Ace3, LibRealmInfo, LibDBIcon, LibDataBroker-1.1
 ## SavedVariables: DawnToolsDB
 ## IconTexture: Interface\AddOns\DawnTools\media\dawnLogo
@@ -43,3 +43,4 @@ modules\DawnRealmLookup.lua
 modules\DawnTradeLog.lua
 modules\DawnMacros.lua
 modules\DawnStringSender.lua
+
