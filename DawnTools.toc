@@ -1,11 +1,12 @@
-## Interface: 120000
+## Interface: 120001
 ## Title: |cFFFF5050Dawn|rTools
 ## Notes: Dawn Community - https://discord.gg/dawneu
 ## Author: Hitek
-## Version: 2026.01.23b-ad
+## Version: 2026.02.24-ad
 ## OptionalDependencies: Ace3, LibRealmInfo, LibDBIcon, LibDataBroker-1.1
 ## SavedVariables: DawnToolsDB
 ## IconTexture: Interface\AddOns\DawnTools\media\dawnLogo
+## Category: Dawn
 
 libs\LibStub\LibStub.lua
 libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
